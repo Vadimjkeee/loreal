@@ -1,0 +1,193 @@
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+p {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 400;
+}
+
+html {
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    text-align: center;
+    &__check {
+        margin-bottom: 4rem;
+    }
+    &__title {
+        font-family: "Century Gothic Bold";
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: #212121;
+    }
+    &__subtitle {
+        font-family: "Century Gothic";
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        color: #212121;
+    }
+}
+
+.feedback {
+    padding: 6rem 2rem 9rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &__title {
+        font-family: "Century Gothic";
+        font-size: 2.4rem;
+        line-height: 2.9rem;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 3.5rem;
+    }
+    &__field {
+        margin-bottom: 3.5rem;
+        height: 5rem;
+        border: 1px solid #bbbbbb;
+        font-family: "Century Gothic";
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #bbbbbb;
+    }
+    &__button {
+        width: 14rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &_bottom {
+        display: flex;
+        align-items: center;
+    }
+    &__confirmation {
+        margin-left: 3.5rem;
+        font-family: "Century Gothic";
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #000000;
+    }
+}
+
+.cross {
+    position: absolute;
+    right: 0;
+}
+
+.button {
+    &__disabled {
+        background: #bbbbbb;
+    }
+}
+
+.form:first-child {
+    margin-bottom: 16.5rem;
+}
+
+.review {
+    display: flex;
+    justify-content: space-between;
+    padding: 7rem 0 10rem 7rem;
+    &__title {
+        font-family: "Century Gothic Bold";
+        font-size: 4rem;
+        line-height: 4.9rem;
+        text-transform: uppercase;
+        color: #000000;
+        margin-bottom: 6.4rem;
+    }
+    &__field {
+        height: 5rem;
+        margin-bottom: 3.5rem;
+        font-family: "Century Gothic";
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #000000;
+    }
+    &__rating {
+        margin-bottom: 3.5rem;
+        height: 20rem;
+        width: 100%;
+        padding: 4.4rem 0 0 2rem;
+        font-family: "Century Gothic";
+        font-size: 2rem;
+        line-height: 2.5rem;
+        color: #000000;
+    }
+}
+
+.stock {
+    position: relative;
+}
+
+.stars {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+}
+
+.request {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.screenshot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 22.3rem 7.7rem;
+    text-align: center;
+    position: relative;
+    border: 1px dashed #000000;
+    width: 40%;
+    &__title::before {
+        content: url("../../img/other/choise.svg");
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        font-family: "Century Gothic";
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: uppercase;
+        color: #000000;
+    }
+}
+
+
+
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+    @media (max-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+    @media (min-width: 767px) {
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+}
+
+a{
+    text-decoration: none;
+}

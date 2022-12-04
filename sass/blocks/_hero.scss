@@ -1,0 +1,82 @@
+.hero {
+    background: #F1F1F1;
+    position: relative;
+    padding: 0 0 1rem;
+    &__product{
+        margin-left: -5%;
+    }
+    &__wrapper{
+        position: relative;
+    }
+    &__content{
+        padding-top: 7.6rem;
+    }
+    &__wrapper{
+        display: flex;
+
+    }
+    &__girls{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &__title {
+        @include adaptiv-font(20, 16);
+        font-family: "Century Gothic Bold";
+        line-height: 2.5rem;
+        text-transform: uppercase;
+        color: #212121;
+        margin-bottom: 2rem;
+        &_gold{
+            color: #BC9575;
+        }
+    }
+    &__subtitle {
+        font-family: "Century Gothic";
+        @include adaptiv-font(38, 30);
+        line-height: 4.9rem;
+        text-transform: uppercase;
+        color: #212121;
+        margin-bottom: 11.6rem;
+        max-width: 59.7rem;
+        &_bold{
+            font-family: "Century Gothic Bold";
+        }
+    }
+}
+
+.button{
+    align-items: center;
+    padding: 1.6rem 2.6rem;
+    background: linear-gradient(143.44deg, #bb9474 18.17%, #d7bda8 78.71%); 
+    box-shadow: 0 0.4rem 0.9rem rgba(0, 0, 0, 0.12);
+    border-radius: 1.5rem;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: #F1F1F1 solid 1px;
+    font-family: 'Century Gothic Bold';
+    font-size: 1.6rem;
+    line-height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 1.6rem 9.2rem;
+}
+
+.button:hover{
+    border: #212121 solid 1px;
+    transition: 0.3s;
+}
+
+.girls-img {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.packs-img {
+    position: absolute;
+    z-index: 1;
+    left: 28%;
+    top: 24.5rem;
+}
